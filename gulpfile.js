@@ -50,4 +50,4 @@ gulp.task('del', async() => {
 });
 
 gulp.task('build', gulp.series('del', 'html', 'style', 'js'));
-gulp.task('start', gulp.parallel('del', 'html', 'style', 'js', 'browser-sync', 'watch'));
+gulp.task('start', gulp.series('del', 'html', 'style', 'js', 'browser-sync', 'watch'));
